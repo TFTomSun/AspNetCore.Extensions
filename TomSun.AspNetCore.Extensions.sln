@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2005
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TomSun.AspNetCore.Extensions", "TomSun.AspNetCore.Extensions\TomSun.AspNetCore.Extensions.csproj", "{B5B943E5-BFDE-4945-9728-0F8243A910EA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B5B943E5-BFDE-4945-9728-0F8243A910EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5B943E5-BFDE-4945-9728-0F8243A910EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5B943E5-BFDE-4945-9728-0F8243A910EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5B943E5-BFDE-4945-9728-0F8243A910EA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8B448A3E-5CBC-4FD2-ADAA-4F66E9EA2F56}
+	EndGlobalSection
+EndGlobal
