@@ -1,0 +1,30 @@
+version: 1.0.{build}
+image: Visual Studio 2017
+configuration: Release
+platform: Any CPU
+dotnet_csproj:
+  patch: true
+  file: '**\*.csproj'
+  version: '{version}'
+  package_version: '{version}'
+  assembly_version: '{version}'
+  file_version: '{version}'
+  informational_version: '{version}'
+install:
+- cmd: appveyor DownloadFile https://dist.nuget.org/win-x86-commandline/latest/nuget.exe
+before_build:
+- cmd: nuget restore
+build:
+  publish_nuget: true
+  publish_nuget_symbols: true
+  include_nuget_references: true
+  verbosity: minimal
+before_package:
+- cmd: dotnet pack /p:Version=%APPVEYOR_BUILD_VERSION%
+artifacts:
+- path: '**\*.nupkg'
+  name: NugetPackages
+deploy:
+- provider: NuGet
+  api_key:
+    secure: 5Ct0G5LKjcTRtCJaabqaVaVgQCrQzNWjBiCbVQRj/gWRxooIw1MAoLxkyeUJi0yB
