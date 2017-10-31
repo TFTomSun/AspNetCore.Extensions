@@ -1,0 +1,23 @@
+﻿@addTagHelper "*, TomSun.AspNetCore.Extensions"
+@model Microsoft.AspNetCore.Html.IHtmlContent
+@using TomSun.AspNetCore.Extensions.TagHelpers
+@using TomSun.AspNetCore.Extensions
+<div id="@idleContainer">@Html.Raw(this.Model.GetHtmlString())</div>
+<div id="@loadContainer" style="display: none;">
+    <img src="@imagePath" /> Loading ...
+</div>
+<div id="@contentContainer" style="display: none;"></div>
+@functions
+{
+    private readonly TagId idleContainer = nameof(idleContainer);
+    private readonly string imagePath = Resources.LoadingImagePath;
+    /// <summary>
+    /// Used in spa javascript to toggle visiblity.
+    /// </summary>
+    private readonly TagId loadContainer = nameof(loadContainer);
+
+    /// <summary>
+    /// Used in spa javascript to fill it with the async loaded view component.
+    /// </summary>
+    private readonly TagId contentContainer = nameof(contentContainer);
+}
