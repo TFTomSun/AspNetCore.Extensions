@@ -10,8 +10,6 @@ dotnet_csproj:
   assembly_version: '{version}'
   file_version: '{version}'
   informational_version: '{version}'
-install:
-- cmd: appveyor DownloadFile https://dist.nuget.org/win-x86-commandline/latest/nuget.exe
 before_build:
 - cmd: nuget restore
 build:
@@ -21,10 +19,30 @@ build:
   verbosity: minimal
 before_package:
 - cmd: dotnet pack /p:Version=%APPVEYOR_BUILD_VERSION%
+test_script:
+- ps: >-
+    #run tests
+
+    dotnet test "--logger:trx;LogFileName=results.trx"
+
+
+    # upload results to AppVeyor
+
+    $files = Get-ChildItem -Path ".\" -Recurse -Include *.trx
+
+
+    $files | Foreach-Object {
+
+
+    $wc = New-Object 'System.Net.WebClient'
+
+    $wc.UploadFile("https://ci.appveyor.com/api/testresults/mstest/$($env:APPVEYOR_JOB_ID)", $_.FullName)
+
+
+    }
 artifacts:
 - path: '**\*.nupkg'
   name: NugetPackages
-deploy:
-- provider: NuGet
-  api_key:
-    secure: 5Ct0G5LKjcTRtCJaabqaVaVgQCrQzNWjBiCbVQRj/gWRxooIw1MAoLxkyeUJi0yB
+- path: '**\*.dll'
+  name: Assemblies
+deploy: off
