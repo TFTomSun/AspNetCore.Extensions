@@ -45,4 +45,7 @@ artifacts:
   name: NugetPackages
 - path: '**\*.dll'
   name: Assemblies
-deploy: off
+deploy:
+- provider: NuGet
+  api_key:
+    secure: 5Ct0G5LKjcTRtCJaabqaVaVgQCrQzNWjBiCbVQRj/gWRxooIw1MAoLxkyeUJi0yB
