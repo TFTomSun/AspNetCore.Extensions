@@ -8,6 +8,7 @@ echo "APPVEYOR_PROJECT_ID $env:APPVEYOR_PROJECT_ID"
 echo "APPVEYOR_PROJECT_NAME $env:APPVEYOR_PROJECT_NAME"
 echo "APPVEYOR_ACCOUNT_NAME $env:APPVEYOR_ACCOUNT_NAME"
 echo "APPVEYOR_PROJECT_SLUG $env:APPVEYOR_PROJECT_SLUG"
+echo "APPVEYOR_PROJECT_SLUG $env:APPVEYOR_REPO_BRANCH"
 
 $readMeContentFileName = "README.content.md"
 echo "read $readMeContentFileName" 
@@ -27,4 +28,4 @@ Set-Content README.md –value $header, $readMe
 
 git add -A
 git commit -m "[skip ci] README.md updated by AppVeyor build"
-git push origin HEAD:$env:APPVEYOR_REPO_BRANCH
+git push origin HEAD:$($env:APPVEYOR_REPO_BRANCH)

@@ -1,4 +1,4 @@
-# BuildStatus for Build 1.0.51
+# BuildStatus for Build 1.0.52
 
 [![Build status](https://ci.appveyor.com/api/projects/status/idimh44hkkub19vm?svg=true)](https://ci.appveyor.com/project/TFTomSun/aspnetcore-extensions)
 [![Test status](http://teststatusbadge.azurewebsites.net/api/status/TFTomSun/aspnetcore-extensions)](https://ci.appveyor.com/project/TFTomSun/aspnetcore-extensions/build/tests)
