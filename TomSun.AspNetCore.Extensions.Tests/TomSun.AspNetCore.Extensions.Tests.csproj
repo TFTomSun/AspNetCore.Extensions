@@ -1,15 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
   </PropertyGroup>
- <ItemGroup>
+  <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="*" />
     <PackageReference Include="NUnit" Version="*" />
-    <PackageReference Include="NUnit3TestAdapter" Version="*"/>
+    <PackageReference Include="NUnit3TestAdapter" Version="*" />
   </ItemGroup>
- <ItemGroup>
-   <ProjectReference Include="..\TomSun.AspNetCore.Extensions\TomSun.AspNetCore.Extensions.csproj" />
- </ItemGroup>
-
+  <ItemGroup>
+    <ProjectReference Include="..\TomSun.AspNetCore.Extensions\TomSun.AspNetCore.Extensions.csproj" />
+  </ItemGroup>
 </Project>
