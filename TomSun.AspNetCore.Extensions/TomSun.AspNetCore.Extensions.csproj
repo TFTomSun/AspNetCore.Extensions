@@ -1,14 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
   </PropertyGroup>
-
   <ItemGroup>
     <EmbeddedResource Include="Views\**\*.cshtml" />
     <EmbeddedResource Include="Pages\**\*.cshtml" />
   </ItemGroup>
-
   <ItemGroup>
     <EmbeddedResource Include="DotNetify\Resources\ReactComponentTemplate.jsx">
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
@@ -25,13 +23,13 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
     </Content>
   </ItemGroup>-->
-<ItemGroup>
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.0" />
- </ItemGroup>
-<ItemGroup>
-  <Folder Include="Pages\" />
-  <Folder Include="ViewRenderer\" />
-</ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Pages\" />
+    <Folder Include="ViewRenderer\" />
+  </ItemGroup>
 <ItemGroup>
   <ProjectReference Include="..\..\NetStandard.Platform\TomSun.NetStandard.Platform\TomSun.NetStandard.Platform.csproj" />
 </ItemGroup>
