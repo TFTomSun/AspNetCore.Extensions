@@ -9,6 +9,17 @@
     <EmbeddedResource Include="Pages\**\*.cshtml" />
   </ItemGroup>
 
+  <ItemGroup>
+    <EmbeddedResource Include="DotNetify\Resources\ReactComponentTemplate.jsx">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Spa.js">
+    </EmbeddedResource>
+  </ItemGroup>
+
   <!--<ItemGroup>
     <Content Include="Javascript\Spa.js">
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
@@ -20,5 +31,8 @@
 <ItemGroup>
   <Folder Include="Pages\" />
   <Folder Include="ViewRenderer\" />
+</ItemGroup>
+<ItemGroup>
+  <ProjectReference Include="..\..\NetStandard.Platform\TomSun.NetStandard.Platform\TomSun.NetStandard.Platform.csproj" />
 </ItemGroup>
 </Project>

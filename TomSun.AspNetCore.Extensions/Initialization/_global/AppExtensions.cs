@@ -38,8 +38,17 @@ public static class AppExtensions
         });
     }
 
+    public static void UseStaticEmbeddedFiles(this IApplicationBuilder app, Assembly assembly, string relativePath)
+    {
+        app.UseStaticFiles(new StaticFileOptions
+        {
+            FileProvider = new EmbeddedResourceFileProvider(relativePath,assembly),
+            RequestPath = new PathString(relativePath)
+        });
+    }
     public static void UseSpaFramework(this IApplicationBuilder app, IServiceProvider serviceProvider)
     {
+        app.UseStaticEmbeddedFiles(typeof(AppExtensions).Assembly, "/SpaFiles");
         CoreExtensions.ServiceProviderField = serviceProvider;
     }
 
