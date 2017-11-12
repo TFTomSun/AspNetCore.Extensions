@@ -8,17 +8,12 @@
     <EmbeddedResource Include="Pages\**\*.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="DotNetify\Resources\ReactComponentTemplate.jsx">
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Resources\Spa.js">
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.0" />
-    <PackageReference Include="TomSun.NetStandard.Extensions" />
+    <PackageReference Include="TomSun.NetStandard.Extensions" Version="*" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Pages\" />
