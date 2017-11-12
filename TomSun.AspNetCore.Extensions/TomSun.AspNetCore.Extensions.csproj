@@ -12,25 +12,18 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
     </EmbeddedResource>
   </ItemGroup>
-
   <ItemGroup>
     <EmbeddedResource Include="Resources\Spa.js">
     </EmbeddedResource>
   </ItemGroup>
-
-  <!--<ItemGroup>
-    <Content Include="Javascript\Spa.js">
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-  </ItemGroup>-->
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.0" />
+    <PackageReference Include="TomSun.NetStandard.Extensions" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Pages\" />
     <Folder Include="ViewRenderer\" />
   </ItemGroup>
 <ItemGroup>
-  <ProjectReference Include="..\..\NetStandard.Platform\TomSun.NetStandard.Platform\TomSun.NetStandard.Platform.csproj" />
 </ItemGroup>
 </Project>
