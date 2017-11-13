@@ -1,6 +1,4 @@
 using System;
-using System.Collections.Generic;
-using System.Dynamic;
 using System.IO;
 using System.IO.Compression;
 using System.Net;
@@ -9,10 +7,8 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.Text.Encodings.Web;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Html;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using TomSun.AspNetCore.Extensions.ExternalFramework;
 using TomSun.AspNetCore.Extensions.SharpComponents;
+using TomSun.Portable.Factories;
 
 public static class Extensions
 {

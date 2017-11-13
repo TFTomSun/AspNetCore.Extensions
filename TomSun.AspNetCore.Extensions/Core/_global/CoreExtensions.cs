@@ -7,10 +7,10 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Razor;
 using Microsoft.Extensions.DependencyInjection;
-using TomSun.AspNetCore.Extensions.ExternalFramework;
+using TomSun.Portable.Factories;
 
 
-internal static class CoreExtensions
+public static class CoreExtensions
 {
     public static IServiceProvider ServiceProvider(this IGlobal global)
     {
