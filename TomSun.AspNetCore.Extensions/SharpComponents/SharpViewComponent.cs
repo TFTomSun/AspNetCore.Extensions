@@ -94,7 +94,6 @@ namespace TomSun.AspNetCore.Extensions.SharpComponents
     public abstract class SharpViewComponent<TParameter> : SharpViewComponent
     {
 
-        public abstract Task<IViewComponentResult> InvokeAsync(TParameter parameter);
 
         public async Task<IViewComponentResult> DoInvokeAsync(TParameter parameter)
         {
@@ -106,6 +105,13 @@ namespace TomSun.AspNetCore.Extensions.SharpComponents
             return await Task.FromResult(this.View(parameter));
         }
 
+    }
+    
+
+    public abstract class SpaViewComponent<TSelf, TParameter> : SharpViewComponent<TSelf,TParameter>
+        where TSelf : SpaViewComponent<TSelf, TParameter>
+    {
+        public abstract Task<IViewComponentResult> InvokeAsync(TParameter parameter);
     }
 
     public abstract class SharpViewComponent<TSelf,  TParameter> : SharpViewComponent<TParameter>

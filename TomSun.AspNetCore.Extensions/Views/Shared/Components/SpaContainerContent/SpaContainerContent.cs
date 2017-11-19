@@ -6,7 +6,7 @@ using TomSun.AspNetCore.Extensions.SharpComponents;
 namespace TomSun.AspNetCore.Extensions.Views.Shared.Components.SpaContainerContent
 {
     //[ViewComponent( Name = "DefaultAsyncRenderer")]
-    public class SpaContainerContent : SharpViewComponent<SpaContainerContent, IHtmlContent>
+    public class SpaContainerContent : SpaViewComponent<SpaContainerContent, IHtmlContent>
     {
         public override async Task<IViewComponentResult> InvokeAsync(IHtmlContent parameter)
         {
