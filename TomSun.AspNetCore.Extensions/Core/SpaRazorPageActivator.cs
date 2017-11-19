@@ -30,8 +30,7 @@ public class SpaRazorPageActivator : IRazorPageActivator
         this.DefaultActivator.Activate(page, context);
         if (!(page is RazorPageAdapter))
         {
-            dynamic dynamicPage = page;
-            var componentHelper = (IViewComponentHelper)dynamicPage.Component;
+            var componentHelper = (IViewComponentHelper)page.GetType().GetProperty("Component").GetValue(page);
             // Maybe we should add the page type information. to get back extactly the helper for the desired page.
             this.HttpContextAccessor.HttpContext.Items[nameof(CoreExtensions.ViewComponentHelper)] = componentHelper;
             this.HttpContextAccessor.HttpContext.Items[nameof(CoreExtensions.RazorPage)] = page;
