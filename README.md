@@ -1,4 +1,4 @@
-# BuildStatus for Build 1.0.60
+# BuildStatus for Build 1.0.61
 
 [![Build status](https://img.shields.io/appveyor/ci/TFTomSun/aspnetcore-extensions.svg)](https://ci.appveyor.com/project/TFTomSun/aspnetcore-extensions) 
 [![Test status](https://img.shields.io/appveyor/tests/TFTomSun/aspnetcore-extensions.svg)](https://ci.appveyor.com/project/TFTomSun/aspnetcore-extensions/build/tests)
